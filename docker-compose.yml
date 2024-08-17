@@ -1,0 +1,14 @@
+services:
+  app:
+    # gotodoというイメージを作成
+    image: gotodo
+    # Dockerfile上の"AS dev"を実行対象とする
+    build:
+      args:
+        - target=dev
+    # リポジトリのカレントディレクトリをコンテナ内のWORKDIRで指定した"/app"へマウント
+    volumes:
+      - .:/app
+    # 開発端末で18000のポートへリクエストするとコンテナ側の80番ポートへアクセスする
+    ports:
+      - "18000:80"
