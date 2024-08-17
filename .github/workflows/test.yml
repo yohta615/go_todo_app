@@ -1,4 +1,4 @@
-name: test
+name: Goの自動テスト
 on:
   push:
     branches:

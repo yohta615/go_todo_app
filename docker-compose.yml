@@ -6,9 +6,12 @@ services:
     build:
       args:
         - target=dev
+    environment:
+      TODO_ENV: dev
+      PORT: 8080
     # リポジトリのカレントディレクトリをコンテナ内のWORKDIRで指定した"/app"へマウント
     volumes:
       - .:/app
     # 開発端末で18000のポートへリクエストするとコンテナ側の80番ポートへアクセスする
     ports:
-      - "18000:80"
+      - "18000:8080"

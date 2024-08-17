@@ -1,4 +1,4 @@
-name: golang-ci
+name: 静的解析
 on:
   workflow_dispatch:
   pull_request:

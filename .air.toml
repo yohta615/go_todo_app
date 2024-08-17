@@ -7,7 +7,7 @@ cmd = "go build -o ./tmp/main ."
 # Binary file yields from `cmd`.
 bin = "tmp/main"
 
-# 80番ポートで起動するよう実行時引数を指定
+# 80番ポートで起動するよう実行時引数を指定しているが環境変数でポート指定するよう変更したため使用しない
 full_bin = "APP_ENV=dev APP_USER=air ./tmp/main 80"
 
 include_ext = ["go", "tpl", "tmpl", "html"]
